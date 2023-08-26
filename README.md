@@ -1,7 +1,8 @@
 # ASL_Translation_using_object_detection_models
 REAL TIME CLOSED CAPTION ASL TRANSLATOR USING   OBJECT DETECTION MODELS
-![DEMO](https://github.com/miraj0507/ASL_Translation_using_object_detection_models/assets/62544210/a1d97f9e-8dda-4734-be5e-9c95ed394006)
 
+
+![DEMO](https://github.com/miraj0507/ASL_Translation_using_object_detection_models/assets/62544210/dcff17a3-1e3d-41ab-a683-8051789fb18a)
 
 Can computer vision bridge the gap for the deaf and hard of hearing by learning American Sign Language? If ASL can accurately be interpreted through a machine learning application, even if it starts with just the alphabet, we can mark a step in providing greater accessibility and educational resources for our deaf and hard-of-hearing communities.
 
