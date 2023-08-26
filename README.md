@@ -1,20 +1,20 @@
 # ASL_Translation_using_object_detection_models
 REAL TIME CLOSED CAPTION ASL TRANSLATOR USING   OBJECT DETECTION MODELS
 
-
+## DEMO PREDICTION OF HAND GESTURE 
 ![DEMO](https://github.com/miraj0507/ASL_Translation_using_object_detection_models/assets/62544210/dcff17a3-1e3d-41ab-a683-8051789fb18a)
 
 Can computer vision bridge the gap for the deaf and hard of hearing by learning American Sign Language? If ASL can accurately be interpreted through a machine learning application, even if it starts with just the alphabet, we can mark a step in providing greater accessibility and educational resources for our deaf and hard-of-hearing communities.
 
 American Sign Language (ASL) is a complete, natural language that has the same linguistic properties as spoken languages, with grammar that differs from English. ASL is expressed by movements of the hands and face. It is the primary language of many North Americans who are speech and hearing impaired, along with some hearing people as well. In most cases, people communicating in sign language use actions and gestures to express blocks of words instead of just individual letters or symbols. 
 
-# DEMO VIDEO
+## DEMO VIDEO
 
 https://github.com/miraj0507/ASL_Translation_using_object_detection_models/assets/62544210/ba7448bd-76ba-4bd2-9faf-8988533b446e
 
 
 
-LSTM MODEL
+## LSTM MODEL
  
 For the model we trained, we collected 30 videos for 3 classes. Each of the videos are 2-3 seconds long and consists of 30 FPS. The extracted keypoints of landmarks are obtained using MediaPipe[12] and are saved in a .npy file. We created our custom dataset by using a Python script utilizing OpenCV package to capture videos from a webcam and storing them in .npy format after MediaPipe processing[6][7]. The files were then separated into folders specific to each class.
 
