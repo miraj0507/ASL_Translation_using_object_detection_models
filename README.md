@@ -29,3 +29,16 @@ The output produced from our LSTM model can detect and predict action labels for
 The max training accuracy achieved was around 92.3% after 126 epochs following which the training was stopped early. The categorical loss that was recorded was around 0.2675. The graphs generated from training using tensorboard are given below. 
 
 
+## MEDIAPIPE
+
+Mediapipe[10] as itself offers a wide range of solutions, within the holistic pipeline of mediapipe[8][10], it consists of three components: pose, hand and face. The holistic model extracts a sum of 1662 individual landmark features (21 ∗ 3 + 21 ∗ 3 + 33 ∗ 4 + 468 ∗ 3 = 1662). We are using the MediaPipe holistic model included in the MediaPipe python module. We defined a function (mediapipe_detection) that takes two arguments:
+1. Image: The image or the frame in which it performs detection
+2. Model: The mediapipe model that we are using for detection (“Holistic model”). 
+
+The function converts the image from BGR to RGB format, the image is then passed through model.process() function and the result is stored. The function then converts the image back to BGR format, and then returns the image and the stored result. We define another function (draw_styled_landmarks), it takes the returned output from the previous functions as its arguments. Using this function we draw the landmarks, which helps visualize the real-time hand detection. Extract Key-points: After real-time hand detection is successfully achieved, we then extract the X,Y and Z coordinates of the key points from the detection results(the stored result returned by the mediapipe_detection function mentioned above). 
+
+We define another method (extract_keypoints) that takes the detection results as its argument, to perform the extraction of the coordinates. This function returns the concatenated array of all the arrays containing the key point coordinates of the holistic model. This function is called during data collection. While we used the holistic model and extracted key points for all three: hand, face and pose, we only showed hand landmarks on the screen during the recognition phase to avoid clusters of landmarks on the screen.
+
+
+
+We use the LRCN  in our comparison study as it differs from the YOLO model in respect that it does not use bounding boxes or image localisation for frame processing and from the LSTM model as it does not use Holistic Pose and Hand detection to extract feature points. The LRCN model uses the entire frame for feature extraction without detecting the hand points or human pose which is then passed to the sequential model for temporal processing. For the LRCN model, we use a CNN to extract spatial features at a given time step in the input sequence (video) and then an LSTM to identify temporal relations between frames.
